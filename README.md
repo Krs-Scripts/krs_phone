@@ -5,7 +5,7 @@
 * Work in progress
 
 
-![krs_phone](https://github.com/user-attachments/assets/13e5ee6c-7d1e-4955-afca-6268a697720c)
+![krs_phone](https://github.com/user-attachments/assets/02855bd1-eb2c-479c-a291-d9ba87590962)
 ![Screenshot_2024-08-24_163430-removebg-preview](https://github.com/user-attachments/assets/cb9efd04-1360-4fab-b385-b5f1a50a24f0)
 ![Screenshot_2024-08-24_163403-removebg-preview](https://github.com/user-attachments/assets/25574515-0799-488b-8ef8-d64c90d6cd26)
 ![krs_phone_contact](https://github.com/user-attachments/assets/40cb736b-c3c4-457b-a93d-ef02f15d0e14)
