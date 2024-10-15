@@ -4,8 +4,8 @@
 
 * Spoiler Photo
 
-![Screenshot_2024-10-14_233358-removebg-preview](https://github.com/user-attachments/assets/5bdceb83-6330-40df-a87d-f08932c37c02)
-![Screenshot_2024-10-14_233421-removebg-preview](https://github.com/user-attachments/assets/586e9c04-fc22-4ab5-8b86-d0686e338f46)
-![Screenshot_2024-10-14_233742-removebg-preview](https://github.com/user-attachments/assets/01e7cbb6-d634-4243-8935-2011f406188a)
-![Screenshot_2024-10-14_233927-removebg-preview](https://github.com/user-attachments/assets/21668474-2584-4059-b725-fb86bb3593a7)
-![Screenshot_2024-10-13_114725-removebg-preview](https://github.com/user-attachments/assets/9eb05274-30b4-4c32-8d4b-4af5ff2b585f)
+![Screenshot_2024-10-15_122127-removebg-preview](https://github.com/user-attachments/assets/d1655262-5672-4bd1-957d-9ad3c8ca5b73)
+![Screenshot_2024-10-15_122137-removebg-preview](https://github.com/user-attachments/assets/a21724fd-1c18-43f3-9c20-d5b10353fa16)
+![Screenshot_2024-10-15_122146-removebg-preview](https://github.com/user-attachments/assets/055a96f2-e6d6-4106-8cbe-1a47a811961f)
+![Screenshot_2024-10-15_122205-removebg-preview](https://github.com/user-attachments/assets/501bfbee-5a23-43d4-baf1-47cef28c4e8b)
+![Screenshot_2024-10-15_122118-removebg-preview](https://github.com/user-attachments/assets/56d9ef1e-6d80-45d0-a47c-39ad478ede08)
