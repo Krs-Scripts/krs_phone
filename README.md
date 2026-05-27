@@ -2,4 +2,4 @@
 
 
 
-<img width="1672" height="941" alt="krs_phone" src="https://github.com/user-attachments/assets/462a35f9-69a1-4e32-9c79-3417d6f7f7fb" />
+<img width="1672" height="941" alt="krs_phone" src="https://github.com/user-attachments/assets/04ec935b-77db-4710-b8e9-5d2c869b0be1" />
