@@ -26,7 +26,7 @@ To get the phone working on your server, you need to install the Node.js depende
 1. Download or clone this repository into your `resources` folder.
 2. Open your terminal and navigate to the web folder (e.g., `cd web` or `cd ui`).
 3. Install the required modules:
-   ```bash
+```bash
    npm install
 
 ```
@@ -61,8 +61,6 @@ This project is built with passion and shared freely with the community. You are
 **However, if you plan to publish, release, or distribute a modified version / fork of this phone, YOU MUST GIVE PROPER CREDITS.** It is strictly required to explicitly credit **KRS** as the original creator of the foundation and include a link back to this repository in your release post/documentation. Respecting the work of others is the foundation of a healthy open-source community!
 
 Thank you all for the support, and I can't wait to see what you'll create with it!
-
-```
 
 ```
 
