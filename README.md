@@ -7,6 +7,7 @@ Welcome to the official repository of the **KRS Phone**!
 This project is released as a **free open-source foundation**, allowing developers and server owners to start building, customizing, and developing their own version of the phone for FiveM.
 
 ## ✨ Features
+- 🎥 **PREVIEW:** [showcase]([https://link-al-tuo-video.com](https://streamable.com/fdelql))
 - 🎨 **Ready-to-use interface**
 - ⚙️ **Fully functional settings system** (Dark mode, Wallpaper, Airplane mode, Ringtone selection, etc.)
 - 🎵 **iOS-style notification sounds already included**
