@@ -19,17 +19,52 @@ The phone is designed to be easily adaptable and supports the following framewor
 - **QB-Core**
 - **QBX (Qbox)**
 
+## 📦 Installation & Development
+
+To get the phone working on your server, you need to install the Node.js dependencies and build the UI.
+
+1. Download or clone this repository into your `resources` folder.
+2. Open your terminal and navigate to the web folder (e.g., `cd web` or `cd ui`).
+3. Install the required modules:
+   ```bash
+   npm install
+
+```
+
+** Web Development Mode**
+If you want to edit the UI and see the changes live in your web browser, run:
+
+```bash
+npm run dev
+
+```
+
+** Production Build (For FiveM)**
+Before starting your server, you must build the UI for production. Run this command every time you make changes to the React code:
+
+```bash
+npm run build
+
+```
+
+4. Add `ensure krs_phone` to your `server.cfg`.
+5. Start your server and enjoy! *(The database tables will be created automatically upon starting).*
+
 ## 🚧 Current State (Early Release)
+
 Please keep in mind that this is an **early release**. Some features and apps are not yet fully connected or completed. However, it provides a very solid and clean starting point for anyone who wants to expand it and bring their own ideas to life.
 
 ## ⚠️ License & Credits Policy
-This project is built with passion and shared freely with the community. You are completely free to download, use, and modify the code for your servers. 
+
+This project is built with passion and shared freely with the community. You are completely free to download, use, and modify the code for your servers.
 
 **However, if you plan to publish, release, or distribute a modified version / fork of this phone, YOU MUST GIVE PROPER CREDITS.** It is strictly required to explicitly credit **KRS** as the original creator of the foundation and include a link back to this repository in your release post/documentation. Respecting the work of others is the foundation of a healthy open-source community!
 
 Thank you all for the support, and I can't wait to see what you'll create with it!
 
----
+```
+
+```
 
 <img width="1672" height="941" alt="krs_phone2" src="https://github.com/user-attachments/assets/351d0ec6-349c-4d60-aec3-5c3735079b41" />
 
