@@ -27,7 +27,7 @@ To get the phone working on your server, you need to install the Node.js depende
 2. Open your terminal and navigate to the web folder (e.g., `cd web` or `cd ui`).
 3. Install the required modules:
 ```bash
-   npm install
+npm install
 
 ```
 
