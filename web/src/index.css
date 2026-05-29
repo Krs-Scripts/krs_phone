@@ -1,0 +1,49 @@
+@import url("https://use.typekit.net/qgr5ebd.css");
+
+html {
+  color-scheme: normal !important;
+}
+
+body {
+  background: none !important;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  user-select: none;
+  overflow: hidden !important;
+}
+
+p {
+  margin: 0;
+}
+
+#root {
+  height: 100%;
+}
+
+*:focus {
+    outline: none !important;
+}
+
+button:focus, 
+div:focus, 
+input:focus, 
+a:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+::-moz-focus-inner {
+    border: 0;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  width: 0;
+  height: 0;
+}
+
