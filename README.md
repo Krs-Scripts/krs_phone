@@ -62,7 +62,6 @@ This project is built with passion and shared freely with the community. You are
 
 Thank you all for the support, and I can't wait to see what you'll create with it!
 
-```
 
 <img width="1672" height="941" alt="krs_phone2" src="https://github.com/user-attachments/assets/351d0ec6-349c-4d60-aec3-5c3735079b41" />
 
