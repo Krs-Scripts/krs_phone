@@ -31,7 +31,7 @@ npm install
 
 ```
 
-** Web Development Mode**
+- Web Development Mode
 If you want to edit the UI and see the changes live in your web browser, run:
 
 ```bash
@@ -39,7 +39,7 @@ npm run dev
 
 ```
 
-** Production Build (For FiveM)**
+- Production Build (For FiveM)
 Before starting your server, you must build the UI for production. Run this command every time you make changes to the React code:
 
 ```bash
