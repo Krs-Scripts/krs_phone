@@ -71,18 +71,21 @@ if not IsDuplicityVersion() then
             end)
 
         elseif Config.Framework == "ESX" then
-            RegisterNetEvent("esx:playerLoaded", function()
-                lib.waitFor(function()
+            local function waitForPed()
+                local deadline = GetGameTimer() + 30000
+                while GetGameTimer() < deadline do
                     if Framework.GetPlayerData() and cache.ped then return true end
-                end, "Ped has not loaded or GetPlayerData returned false (waited 30 seconds)", 30000)
-                Framework.PlayerLoggedIn = true
+                    Wait(100)
+                end
+                return false
+            end
+
+            RegisterNetEvent("esx:playerLoaded", function()
+                if waitForPed() then Framework.PlayerLoggedIn = true end
             end)
 
             RegisterNetEvent("esx:onPlayerSpawn", function()
-                lib.waitFor(function()
-                    if Framework.GetPlayerData() and cache.ped then return true end
-                end, "Ped has not loaded or GetPlayerData returned false (waited 30 seconds)", 30000)
-                Framework.PlayerLoggedIn = true
+                if waitForPed() then Framework.PlayerLoggedIn = true end
             end)
 
             RegisterNetEvent("esx:onPlayerLogout", function()
@@ -101,6 +104,20 @@ if not IsDuplicityVersion() then
 
     CreateThread(function()
         Framework.PlayerLoginListeners()
+
+        -- Handle resource (re)start while the player is already logged in:
+        -- the framework's login events (esx:playerLoaded, QBCore:Client:OnPlayerLoaded, ...)
+        -- have already fired and won't fire again. Detect existing session directly.
+        if Config.Framework == "QBCore" or Config.Framework == "ESX" then
+            local data = Framework.GetPlayerData()
+            if data and (data.identifier or data.citizenid) then
+                Framework.PlayerLoggedIn = true
+            end
+        elseif Config.Framework == "Qbox" then
+            if LocalPlayer.state and LocalPlayer.state.isLoggedIn then
+                Framework.PlayerLoggedIn = true
+            end
+        end
     end)
 
 else
