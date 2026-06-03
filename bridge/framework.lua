@@ -71,18 +71,28 @@ if not IsDuplicityVersion() then
             end)
 
         elseif Config.Framework == "ESX" then
+            
+            local function AwaitESXPlayer()
+                CreateThread(function()
+                    local timer = 0
+                    while not Framework.GetPlayerData() or PlayerPedId() == 0 do
+                        Wait(100)
+                        timer = timer + 100
+                        if timer >= 30000 then
+                            print("[krs_phone] ERROR: Ped has not loaded or GetPlayerData returned false (waited 30 seconds)")
+                            return
+                        end
+                    end
+                    Framework.PlayerLoggedIn = true
+                end)
+            end
+
             RegisterNetEvent("esx:playerLoaded", function()
-                lib.waitFor(function()
-                    if Framework.GetPlayerData() and cache.ped then return true end
-                end, "Ped has not loaded or GetPlayerData returned false (waited 30 seconds)", 30000)
-                Framework.PlayerLoggedIn = true
+                AwaitESXPlayer()
             end)
 
             RegisterNetEvent("esx:onPlayerSpawn", function()
-                lib.waitFor(function()
-                    if Framework.GetPlayerData() and cache.ped then return true end
-                end, "Ped has not loaded or GetPlayerData returned false (waited 30 seconds)", 30000)
-                Framework.PlayerLoggedIn = true
+                AwaitESXPlayer()
             end)
 
             RegisterNetEvent("esx:onPlayerLogout", function()
@@ -90,17 +100,48 @@ if not IsDuplicityVersion() then
             end)
 
         else
-            lib.waitFor(function()
-                if cache.ped then
-                    Framework.PlayerLoggedIn = true
-                    return true
+            CreateThread(function()
+                local timer = 0
+                while PlayerPedId() == 0 do
+                    Wait(100)
+                    timer = timer + 100
+                    if timer >= 500000 then
+                        print("[krs_phone] ERROR: [Standalone] Ped never loaded in; could not login (waited 500 seconds)")
+                        return
+                    end
                 end
-            end, "[Standalone] Ped never loaded in; could not login (waited 500 seconds)", 500000)
+                Framework.PlayerLoggedIn = true
+            end)
         end
     end
 
     CreateThread(function()
         Framework.PlayerLoginListeners()
+    end)
+
+    AddEventHandler('onResourceStart', function(resourceName)
+        if GetCurrentResourceName() ~= resourceName then return end
+        
+        Wait(1000) 
+        
+        if Config.Framework == "QBCore" then
+            local PlayerData = QBCore.Functions.GetPlayerData()
+            if PlayerData and next(PlayerData) then 
+                Framework.PlayerLoggedIn = true 
+            end
+        elseif Config.Framework == "Qbox" then
+            if LocalPlayer.state.isLoggedIn then 
+                Framework.PlayerLoggedIn = true 
+            end
+        elseif Config.Framework == "ESX" then
+            if ESX.IsPlayerLoaded() then 
+                Framework.PlayerLoggedIn = true 
+            end
+        else
+            if PlayerPedId() > 0 then 
+                Framework.PlayerLoggedIn = true 
+            end
+        end
     end)
 
 else
